@@ -1,0 +1,9 @@
+---
+const { author } = Astro.props
+
+---
+<div>
+<q class="font-light block italic text-center text-xl text-blue-900 mt-5 mb-3"><slot /></q>
+
+{ author && <span class="block text-sm text-right my-2 text-gray-400">{author}</span>}
+</div>
