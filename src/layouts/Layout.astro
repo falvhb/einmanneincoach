@@ -1,4 +1,6 @@
 ---
+import CallToAction from "../components/CallToAction.astro";
+import Footer from "../components/Footer.astro";
 import MarkDown from "../components/MarkDown.astro";
 import Title from "../components/Title.astro";
 export interface Props {
@@ -18,12 +20,15 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main class="container mx-auto max-w-xl px-4">
+    <main class="container mx-auto max-w-xl px-4 mb-14">
       <Title>Ein Mann. Ein Coach.</Title>
       <MarkDown>
         <slot />
       </MarkDown>
+      
     </main>
+    <CallToAction></CallToAction>
+    <Footer></Footer>
     <style>
       html {
         font-family: system-ui, sans-serif;
